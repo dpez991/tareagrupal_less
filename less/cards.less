@@ -1,0 +1,49 @@
+
+
+@background-primary: #6b3e26;
+@text-color: #2b1d16;
+
+@card-height-small: 240px;
+@card-height-medium: 280px;
+@card-height-large: 320px;
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin: 3rem auto;
+  width: 90%;
+  max-width: 1100px;
+
+  .card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    img {
+      width: 100%;
+      height: @card-height-medium;
+      object-fit: cover;
+    }
+
+    .card-title {
+      margin: 1rem 0 0.5rem;
+      font-size: 1.3rem;
+      color: @background-primary;
+    }
+
+    .card-text {
+      padding: 0 1rem 1rem;
+      color: @text-color;
+      font-size: 0.95rem;
+    }
+  }
+}
